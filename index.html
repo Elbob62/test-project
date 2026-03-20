@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مملكة ميرنا الخاصة 👑❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-circle">❤️🫂</div>
+        <p>ثواني يا بنوتي معلش...❤️🫂🫂 </p>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div id="loginSection">
+    <div id="hugs-animation-container"></div> 
+    
+    <div class="glass-card">
+        <img src="me.jpeg" alt="ميرنا" class="profile-img">
+        <h2>ادي حضن لحسن 🤗</h2>
+        <p>مستني الحضن عشان نفتح المملكة ❤️</p>
+
+        <div class="password-box">
+            <input type="password" placeholder="اكتبي باسورد بسرعه قبل ماطمع ف حضن تاني😂🫂" id="passInput">
+            <button onclick="checkPassword()">دخول للمملكة 👑</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="birthdaySection" style="display:none;">
+    <div class="glass-card">
+        <img src="me.jpeg" alt="ميرنا" class="profile-img">
+        <h2>خطوة كمان يا بنوتي 🎂❤️</h2>
+        <p>اكتبي تاريخ ميلادك ي قلب بابا🫂❤️</p>
+        <div class="password-box">
+            <input type="text" placeholder="يوم/شهر/سنة" id="birthInput">
+            <button onclick="checkSecondPassword()">يلا ندخل ي قلب بابا 🫂🫂🫂</button>
+        </div>
+    </div>
+</div>
+
+        <div id="secretContent" style="display:none;">
+            
+            <h2 class="main-title">بداية عمري معاكي ❤️</h2>
+            <div class="first-meeting">
+                <h4>أول مرة اتقابلنا كانت يوم:</h4>
+                <p class="date-highlight">3/4/2026</p>
+            </div>
+
+             <p class="forever-text">هيفضل شغال طول ماحنا مع بعض ولاخر العمر🫂❤️</p>
+
+            <div class="timer">
+                <div class="time-unit"><span id="years">0</span><p>سنة</p></div>
+                <div class="time-unit"><span id="months">0</span><p>شهر</p></div>
+                <div class="time-unit"><span id="days">0</span><p>يوم</p></div>
+                <div class="time-unit"><span id="hours">0</span><p>ساعة</p></div>
+                <div class="time-unit"><span id="minutes">0</span><p>دقيقة</p></div>
+                <div class="time-unit"><span id="seconds">0</span><p>ثانية</p></div>
+            </div>
+
+             <h3>    اضغطي علي كروت ي بنوتى❤️🫂 </h3>
+
+            <div class="cards-grid">
+                <div class="card" onclick="revealCard(this, '   كل سنه وانتي طيبه ي احن واجمل بنوته ف دنيا 🥳🎂❤️ ')">❤️</div>
+                <div class="card" onclick="revealCard(this, 'بحببببببك اووووووووووي ي بنووتي 🫂🫂🫂🫂🫂')">❤️</div>
+                <div class="card" onclick="revealCard(this, 'أجمل صدفة في حياتي')">❤️</div>
+                <div class="card" onclick="revealCard(this, 'ضحكتك هي اللي بتنور يومي')">❤️</div>
+                <div class="card" onclick="revealCard(this, 'وعد هفضل سندك وضهرك')">❤️</div>
+                <div class="card" onclick="revealCard(this, 'بحبك اكتر من من اي حاجه ')">❤️</div>
+            </div>
+
+            <audio id="bgMusic" loop>
+                <source src="اغنيه.mpeg" type="audio/mpeg">
+            </audio>
+
+            <div class="cards-grid">
+               
+
+           <div class="love-letter-container">
+    
+   <div class="love-letter-container">
+    
+    <div class="letter-frame">
+        <div class="frame-decor">✨ 🫂 ❤️ ✨</div>
+        <h3 class="frame-title">اقفي هنا بقا شويه😂❤️🫂</h3>
+        <h3 class="frame-title">رسالة ليكي بنوتي 💌</h3>
+        
+        <div class="letter-content">
+            <p class="special-p">" بنوتي يا أجمل ميرنا في الدنيا المكان ده معمول عشانك وعشان يفضل يفكرنا بكل لحظة حلوة بينا دي مملكتك يا روحي 💜🫂 ".</p>
+            
+            <p class="main-p">" كل سنه وانتي طيبه ي قلب بابا اول عيد ميلاد واول سنه بنوتي تكبر فيها واحنا مع بعض واول رمضان واول عيد نكون فيه مع بعض دخلتي حياتي صدفه واجمل صدفه حصلتلي في حياتي كلها وكل اللي جاي بتاعنا احنا الي فات حماده والي جاي حماده تاني خالص 😂❤️ الي جاي بتاعنا احنا عدينا شوت كبير اووووووووووي وهنعدي الي باقي والي جاي واي حاجه هتقابلنا هنعديها طول ماحنا مع بعض وسوا مش مهم اي الي بيقابلنا واي الي بيحصل المهم اننا مع بعض وبنعديها مع بعض انا عمرس ماهسيبك ابدا هفضل طول عمري سندك وضهرك وامانك وعزوتك وصحبك واخوكي وحبيبك وابوكي وكل حاجه ي قلب بابا وكل حاجه هتعدي طول ماحنا مع بعض مفيش حاجه هتوقفنا ولا هتمنعنا وهنوصل احنا قد الدنيا وقد اي حد وقد اي حاجه طول ماحنا مع بعض انا مقدرش استغنى عنك ولا اقدر اسيبك ابدا انتي بقيتي حته مني ي قلب بابا ومفيش اي حاجه هتفرقنا عن بعض ابدا وهنفضل مع بعض لاخر العمر وانا هفضل بابا وصحبك وسندك وضهرك وعزوتك وكل حاجه بتتمنيها وهعوضك عن كل حاجه شوفتيها في حياتك واخليكي اسعد واحده ربنا يقدرني واسعدك دايما وابقا دايما امانك وسندك وضهرك وعزوتك ربنا يقدرني وابقا العوض ليكي بجد واعوضك عن كل حاجه ي قلبي  💜🫂💜 ".</p>
+        </div>
+        <div class="frame-footer">معاكي لآخر العمر❤️🫂🫂❤️</div>
+    </div>
+<div class="letter-frame">
+    <div class="frame-decor">✨ 💖 👑 ✨</div>
+    <h3 class="frame-title">اقفي هنا بقا شويه كمان 😂❤️🫂</h3>
+    <h3 class="frame-title">كلمتين من جوه قلبي ليكي.. ❤️🫂</h3>
+    
+    <div class="letter-content">
+        <p class="special-p">"  يا ست البنات ويا أغلى ما أملك واعز حاجه في حياتي  "</p>
+        
+        <p class="main-p">
+            "عايز أقولك إن وجودك في حياتي غير كل حاجة، إنتي مش بس بنوتي، إنتي السند والضحكة اللي بتصبرني على أي حاجة صعبة. 
+            وعد مني نفضل سوا ونكبر سوا وكل عيد وإحنا مع بعض وكل سنة وإنتي منوره حياتي ومنوره مملكتك الخاصة. 
+            ربنا يخليكي ليا وما يحرمنيش من شقاوتك ولا جنانك اللي مخلّي لحياتي طعم.. بحبك يا بنوتي ❤️🫂 "
+            وهنا احب اقولك اني نويت وعهدت نفسي وخدت وعد ع نفسي وبيني وبين ربنا حاجه هعملها هتخلصك من كل التعب ده وكل كلام ده وتبقي ف امان وتخلصك من كلام البيت وتخلصك من كل حاجه وحشه هتاخدنا ف حته تانيه خالص وانتي شخصيا هتتفاجئي بالي هعمله بس هتفرحي جدا من الحاجه ومن ان الحاجه دي هتريحك خلاص وانك مطمنه وفي امان ي قلب بابا❤️❤️🫂🫂🫂🫂🫂 النيه دي بتاريخ 1/3/2026🫂🫂🫂🫂
+        </p>
+    </div>
+    <div class="frame-footer">دايماً جنبك.. ي قلب بابا ❤️</div>
+</div>
+    <div class="photo-gallery-vertical">
+        
+        <div class="gallery-item-polaroid">
+            <img src="me.jpeg" alt="1" class="final-img">
+            <p class="photo-caption">ضحكتنا دي بالدنيا وما فيها.. ربنا يديمك ليا ❤️</p>
+        </div>
+
+        <div class="gallery-item-polaroid">
+            <img src="me2.jpeg" alt="2" class="final-img">
+            <p class="photo-caption">أجمل وقت بقضيه معاكي.. كل لحظة بتفرق 💖</p>
+        </div>
+
+        <div class="gallery-item-polaroid">
+            <img src="me3.jpeg" alt="3" class="final-img">
+            <p class="photo-caption">حبيت وجودك واتعلقت بيكي.. مقدرش استغنى عنك 😍</p>
+        </div>
+
+        <div class="gallery-item-polaroid">
+            <img src="me4.jpeg" alt="4" class="final-img">
+            <p class="photo-caption">وعد هفضل جنبك لآخر العمر.. انتي كل حاجة ليا 🥰</p>
+        </div>
+
+    </div>
+</div>
+<div class="video-special-section">
+
+    <div class="letter-frame">
+        <p class="special-p">
+            كل سنة وانتي طيبة يالي مجننة بابا ومطيرة عقله بس بابا ميقدرش يستغنى عن بنوته ولا يبعد عنها❤️🫂🫂🫂🫂🫂🫂
+        </p>
+        <div class="video-container">
+            <video controls poster="cover1.jpg">
+                <source src="العيد.mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    </div>
+
+    <div class="letter-frame">
+        <p class="special-p">
+            أول عيد ميلاد ليكي وإحنا سوا،  كل ثانية وانتي منورة دنيتي وعد مني كل سنة هكون جنبك ونحتفل بيكي يا أحلى ضحكة في حياتي ربنا يخليكي ليا وميحرمنيش منك ابدا ي قلب بابا🎂❤️👑
+        </p>
+        
+        <div class="video-grid">
+            <div class="video-container">
+                <video controls poster="cover2.jpg">
+                    <source src="عيد ميلاد.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls poster="cover3.jpg">
+                    <source src="Black White Film Frames Birthday Video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </div>
+
+    <div id="animations-container"></div>
+
+    <script src="script.js"></script>
+
+   <div id="musicPlayer" class="modern-player" style="display:none;">
+    <div class="player-container">
+        <div class="track-info">
+            <div class="img-wrapper">
+                <img src="أحبك❤️.jpg" alt="Artist" class="track-img-disk">
+            </div>
+            <div class="text-content">
+                <span class="track-title">اغنيه بتشبهك ي بنوتي ❤️</span>
+                <div class="status">
+                    <span class="dot"></span>
+                    <span class="status-text">تشغيل الآن...</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls-section">
+            <div class="progress-container">
+                <div class="progress-bar-music" id="musicBar"></div>
+            </div>
+            <button id="playPauseBtn" onclick="toggleMusic()" class="control-btn">
+                <span id="playIcon">⏸️</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="اغنيه.mpeg" type="audio/mpeg">
+</audio>
+
+</div>
+    </div>
+</div>
+</body>
+</html>
