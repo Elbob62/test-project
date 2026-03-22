@@ -545,3 +545,74 @@ button {
         gap: 20px;
     }
 }
+
+/* --- تنسيق قسم طلب الزواج --- */
+.proposal-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 30px 0;
+    border-top: 2px dashed #ff4d6d;
+    position: relative;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    min-height: 60px;
+}
+
+/* توحيد حجم زرار (أه) وزرار (لأ) */
+#yesBtn, #noBtn {
+    width: 150px;         /* عرض ثابت للاتنين */
+    height: 55px;        /* طول ثابت للاتنين */
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    font-weight: bold;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+}
+
+/* زرار (لأ) اللي هيهرب في الشاشة كلها */
+#noBtn {
+    background-color: #ffffff;
+    color: #333;
+    position: absolute; /* خليناه absolute عشان يظهر في مكانه الطبيعي الأول */
+    z-index: 9999;
+    /* التعديل ده عشان يظهر تحت زرار آه بالظبط في الأول */
+    margin-top: 10px; 
+}
+
+.hidden { display: none; }
+
+#celebration {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in;
+}
+
+#celebration h3 {
+    color: #ff4d6d;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+/* حركة ظهور بسيطة */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
