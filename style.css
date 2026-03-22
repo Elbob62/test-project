@@ -618,3 +618,41 @@ button {
 }
 
 
+.boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* صندوقين في كل صف */
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: #ffccd5;
+    height: 100px; /* طول مناسب للموبايل */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.1s;
+}
+
+.box:active {
+    transform: scale(0.95);
+}
+
+.message-display {
+    min-height: 120px;
+    padding: 20px;
+    background: #fff;
+    border: 3px solid #ffccd5;
+    border-right: 8px solid #ff4d6d; /* الخط الأحمر اللي في الجنب في صورتك */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
