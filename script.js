@@ -308,3 +308,36 @@ function createHeartsRain() {
     }
 }
 
+const boxesData = [
+    { type: 'funny', messages: ["حياتي من غيرك زي الكشري من غير دقة 😂", "انتي السكر اللي في شايي.. بس سكر زيادة شوية!", "لو كنتي سندوتش كنت أكيد هبقى المايونيز! 🍔"] },
+    { type: 'funny', messages: ["انتي الوحيدة اللي مسموح لها تفتشي في موبايلي (بس بلاش) 🤡", "بحبك أكتر من الشاورما.. وده اعتراف خطير!", "عارفة ليه الأرض بتلف؟ عشان بتدور عليكي! 🌍"] },
+    { type: 'romantic', messages: ["انتي أجمل صدفة في عمري ❤️", " وجودك جنبي هو الأمان اللي كنت بدور عليه", "وعد هفضل دايما السند والامان🫂🫂"] },
+    { type: 'romantic', messages: ["العالم كله في كفة، وانتي لوحدك في كفة تانية خالص", "هفضل طول عمري صادق معاكي في كل كلمه ❤️", "عوض ربنا ليا كان في ضحكتك"] },
+    { type: 'mixed', messages: ["لو بطلنا نتخانق هنموت من الملل! 🥊❤️","بحبك يا مجنونة بس برضه بتعصبيني! ❤️😂", "انتي أحلى حاجة وأرخم حاجة في حياتي"] },
+    { type: 'me', messages: ["انا اسف عشان زعلتك وخوفتك حقك عليا😔🫂", "انا بابا يعني الامان والسند مقدرش ع زعلك 🫂🫂", "هعملك كل الي تطلبيه ميهمنيش غير راحتك ❤️❤️🫂"] },
+    { type: 'tryAgain', messages: ["جربي حظك تاني يا قمر! 🔄", "الصندوق ده فاضي، شوفي غيره 😜", "يلا من هنا ي شطره هنرش ميه😂"] },
+    { type: 'tryAgain', messages: ["تؤ تؤ.. مش ده! بس ضحكتك أحلى 😍","يا بنتي قولتلك الصندوق الصح مش هنا.. ركزي يا ميرنا! 🧐","الصندوق ده فاضي زي جيبي قبل القبض! 💸😂"] },
+    { type: 'funny', messages: ["انتي 'الراوتر' بتاع حياتي.. من غيرك أنا 'Offline'! 📶😂", "انتي 'الشاحن الأصلي' اللي بيرجعلي طاقتي 🔋"] },
+    { type: 'mixed', messages: ["انتي 'النكد' اللي بعشقه ❤️😂","انتي 'البانادول' بتاع صداعي ❤️🤡","حبك زي 'الواي فاي'.. ملوش شكل بس حياتي واقفة من غيره 📶"] },
+    { type: 'me', messages: ["بابا ميقدرش يشوف حاجه ف بنوته حقك عليا 🫂","متخفيش ي ماما انا الامان والله ❤️","تعااااااااااااااالي ف حضني 🫂🫂🫂"] },
+    { type: 'me', messages: ["اطمني ي بنوتي عمري ماهسيبك ولا ابعد عنك 🫂","مش هعمل غير الي يريحك ويكون ف صالحك وفرحتك 🫂🫂"] }
+];
+
+const boxesGrid = document.getElementById('boxesGrid');
+const messageDisplay = document.getElementById('messageDisplay');
+const openSound = document.getElementById('openSound');
+
+// مسح أي صناديق قديمة وإضافة الـ 12 صندوق الجدد
+boxesGrid.innerHTML = '';
+boxesData.forEach((box, index) => {
+    const boxDiv = document.createElement('div');
+    boxDiv.className = 'box';
+    boxDiv.innerHTML = '🎁';
+    boxDiv.onclick = () => {
+        openSound.currentTime = 0;
+        openSound.play();
+        const randomMsg = box.messages[Math.floor(Math.random() * box.messages.length)];
+        messageDisplay.innerText = randomMsg;
+    };
+    boxesGrid.appendChild(boxDiv);
+});
