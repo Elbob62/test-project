@@ -251,3 +251,59 @@ function playMyMusic() {
         });
     }
 }
+
+// 1. وظيفة هروب الزرار (لأ) حوالين زرار (آه)
+function moveButton() {
+    const btn = document.getElementById('noBtn');
+    
+    // بنخلي الحركة "متحررة" في مساحة محددة حوالين السؤال
+    btn.style.position = 'absolute'; 
+
+    // بنحدد مساحة الهروب (150 بكسل حوالين مكانه)
+    const range = 150; 
+    
+    // توليد مكان عشوائي
+    let randomX = Math.floor(Math.random() * (range * 2)) - range;
+    let randomY = Math.floor(Math.random() * (range * 2)) - range;
+
+    // التأكد إن الزرار ميركبش فوق زرار "آه"
+    if (Math.abs(randomX) < 60) randomX += 100;
+    if (Math.abs(randomY) < 60) randomY += 100;
+
+    // تطبيق الحركة بشكل ناعم
+    btn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+}
+
+// 2. وظيفة الموافقة (لما تضغط على آه طبعاً)
+function accepted() {
+    // إخفاء السؤال والزراير تماماً
+    document.querySelector('.buttons-container').style.display = 'none';
+    document.querySelector('.proposal-section h2').style.display = 'none';
+    
+    // إظهار منطقة الاحتفال (الرسالة والقلوب)
+    const celebration = document.getElementById('celebration');
+    celebration.classList.remove('hidden');
+    
+    // تنبيه مبهج يظهر على الشاشة
+    alert("أجمل 'آه' في الدنيا! ربنا يخليكي ليا يا قلبي ❤️🫂🫂");
+
+    // (اختياري) لو عايز تخلي الصفحة تطلع قلوب في كل حتة
+    createHeartsRain();
+}
+
+// 3. وظيفة إضافية عشان "تمطر" قلوب (حركة شيك)
+function createHeartsRain() {
+    const rainContainer = document.querySelector('.hearts-rain');
+    if(rainContainer) {
+        for(let i=0; i<30; i++) {
+            const heart = document.createElement('span');
+            heart.innerHTML = "❤️";
+            heart.style.position = "fixed";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "-10vh";
+            heart.style.fontSize = Math.random() * 20 + 20 + "px";
+            heart.style.animation = `rain ${Math.random() * 2 + 2}s linear forwards`;
+            document.body.appendChild(heart);
+        }
+    }
+}
