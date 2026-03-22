@@ -727,3 +727,86 @@ button {
         overflow-x: hidden !important; /* يمنع الهزة يمين وشمال */
     }
 }
+/* --- تحديث شامل للموبايل عشان العناصر متركبش فوق بعض --- */
+@media (max-width: 600px) {
+    
+    /* 1. منع العناصر من الخروج بره حدود الشاشة */
+    body, html {
+        overflow-x: hidden !important;
+        width: 100%;
+    }
+
+    /* 2. تظبيط العداد (Timer) عشان ميبقاش كبير */
+    .timer {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* يخليهم 3 في السطر بدل ما يزحموا المكان */
+        gap: 10px !important;
+        padding: 10px !important;
+    }
+
+    .time-unit {
+        min-width: 70px !important;
+        padding: 5px !important;
+    }
+
+    /* 3. تظبيط كروت القلوب (Cards) */
+    .cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* كارتين بس في السطر */
+        gap: 12px !important;
+        padding: 15px !important;
+        justify-items: center;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 140px;
+        margin: 0 !important;
+    }
+
+    /* 4. حل مشكلة "الاغنية بتشبهك" والـ Player */
+    .modern-player {
+        width: 95% !important;
+        position: relative !important; /* عشان ميمشيش مع الشاشة ويغطي الكلام */
+        bottom: 10px !important;
+        left: 2.5% !important;
+        margin: 20px 0 !important;
+        z-index: 1000;
+    }
+
+    .player-container {
+        flex-direction: row !important; /* يحافظ على الصورة جنب الكلام بس بحجم أصغر */
+        padding: 8px !important;
+    }
+
+    .track-img-disk {
+        width: 50px !important; /* نصغر الصورة شوية */
+        height: 50px !important;
+    }
+
+    /* 5. تظبيط القلوب والبالونات الطايرة عشان متداريش الكلام */
+    #animations-container, #hugs-animation-container {
+        pointer-events: none; /* عشان متمنعش الضغط على الزراير */
+        opacity: 0.6; /* نخفف حدتها شوية على الموبايل */
+    }
+
+    /* 6. الصور اللي في الجاليري */
+    .gallery-item-polaroid {
+        width: 90% !important;
+        margin: 15px auto !important;
+    }
+
+    /* 7. النصوص الطويلة عشان متخرجش بره البرواز */
+    .special-p, .main-p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        padding: 0 10px !important;
+        word-wrap: break-word;
+    }
+
+    .letter-frame {
+        width: 95% !important;
+        padding: 15px !important;
+        margin: 10px auto !important;
+    }
+}
