@@ -682,3 +682,48 @@ button {
     justify-content: center;
     border-right: 5px solid #ff4d6d;
 }
+/* حل مشكلة الموبايل */
+@media (max-width: 600px) {
+    /* تظبيط كروت القلوب عشان تملى الشاشة وتكون في النص */
+    .cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* يخلي الكروت 2 في كل سطر */
+        gap: 10px !important;
+        justify-content: center !important;
+        padding: 0 10px !important;
+    }
+
+    .card {
+        width: auto !important; /* يلغي العرض الثابت اللي مضيقهم */
+        margin: 0 !important;
+    }
+
+    /* تظبيط مشغل الأغنية (الاغنية بتشبهك) */
+    .modern-player {
+        width: 90% !important;
+        position: relative !important; /* عشان ميتحركش بشكل عشوائي */
+        left: 0 !important;
+        right: 0 !important;
+        margin: 20px auto !important;
+        bottom: 0 !important;
+    }
+
+    .player-container {
+        flex-direction: column !important; /* يخلي الصورة فوق الكلام لو المكان ضيق */
+        text-align: center !important;
+        padding: 10px !important;
+    }
+
+    /* عشان الصور متخرجش بره الإطار */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* تظبيط الـ container الرئيسي */
+    .container {
+        width: 100% !important;
+        padding: 5px !important;
+        overflow-x: hidden !important; /* يمنع الهزة يمين وشمال */
+    }
+}
