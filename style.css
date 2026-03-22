@@ -810,3 +810,14 @@ button {
         margin: 10px auto !important;
     }
 }
+/* جوه سطر الـ @media (max-width: 600px) ضيف دول: */
+
+.timer-section, .cards-section, .love-letter-container {
+    position: relative !important;
+    z-index: 10 !important; /* عشان الكلام يطلع فوق القلوب اللي بتطير */
+    background: rgba(255, 255, 255, 0.05); /* خلفية خفيفة جداً لتحسين الرؤية */
+}
+
+#animations-container {
+    z-index: 1 !important; /* يخلي القلوب والبالونات في الخلفية */
+}
